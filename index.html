@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<title>The Baby Name Generator</title>
+<link rel="stylesheet" type="textless" href="style.css">
+
+</head>
+
+<body>
+<h1 id="pageHeader">Name My Baby!</h1>
+<h3 id="pageHeaderSub">The Baby Name Generator</h3>
+
+<div id="thePitch">
+<p>
+    
+    Congratulations on your impending baby!<br>
+    Giving your baby its name is an important choice--your child will likely be stuck with it for life.<br>
+    A name can be poetic, it can be full of meaning, or it can simply sound cool.<br>
+    Most importantly, a child's name is a chance for its parents to show off their taste.<br>
+    If the name you give your child is stupid, unoriginal or otherwise tasteless, you WILL be made fun of by your friends behind your back.<br><br>
+    Introducing: <span id="introducingThePitch">The Baby Name Generator. </span>
+    <ul style="list-style: none;">
+        <li>Are you stuck trying to name your baby?</li>
+        <li>Are you afraid your name ideas are too unoriginal?</li>
+        <li>Do you have a favorite era whose vibes you'd like to invoke?</li>
+        </ul><br>
+
+    Luckily for you, dating back to the year 1880, the United States government has data compiled on the most common names from every given year.<br>
+    Using our Baby Name Generator, you can traverse this data and find the perfect name for your perfect little bastard.<br><br>
+
+</p>
+</div>
+
+<div id="theGenerator">
+<h2>The Baby Name Generator</h2><br>
+<h4>I want a name that...</h4>
+<form id="submissionForm">
+    <label for="startsWith">Starts With The Letter:</label>
+    <select id="startsWith" name="Letters">
+        <option value="letterA">A</option>
+        <option value="letterB">B</option>
+        <option value="letterC">C</option>
+        <option value="letterD">D</option>
+        <option value="letterE">E</option>
+        <option value="letterF">F</option>
+        <option value="letterG">G</option>
+        <option value="letterH">H</option>
+        <option value="letterI">I</option>
+        <option value="letterJ">J</option>
+        <option value="letterK">K</option>
+        <option value="letterL">L</option>
+        <option value="letterM">M</option>
+        <option value="letterN">N</option>
+        <option value="letterO">O</option>
+        <option value="letterP">P</option>
+        <option value="letterQ">Q</option>
+        <option value="letterR">R</option>
+        <option value="letterS">S</option>
+        <option value="letterT">T</option>
+        <option value="letterU">U</option>
+        <option value="letterV">V</option>
+        <option value="letterW">W</option>
+        <option value="letterX">X</option>
+        <option value="letterY">Y</option>
+        <option value="letterZ">Z</option>
+        <option value="noLetterPreference">I'm flexible</option>
+    </select>
+
+    <h4>Was popular in the years:</h4>
+    <label for="startingYear">From:</label>
+    <input type="number" name="staringYear" id="startingYear">
+    <label for="endingYear">Through:</label>
+    <input type="number" name="endingYear" id="endingYear">
+
+    <h4>That Is Currently...</h4>
+    <label for="currentlyPopular"></label>
+    <select id="currentlyPopular" name="popularity">
+        <option value="veryPopular">Mainstream and Popular</option>
+        <option value="reasonablyPopular">Reasonably Common</option>
+        <option value="notPopular">Not Too Popular</option>
+        <option value="zeroPopular">One of a Kind</option>
+        <option value="noPopularityPreference">Any Popularity</option>
+    </select>
+<br><br><br>
+    <input type="submit" value="Show Me A Name!">
+    <input type="submit" value="Show Me Them All!">
+</form>
+
+</div>
+
+<div id="results">
+    <h3>Your Names:</h3>
+</div>
+
+</body>
+</html>
