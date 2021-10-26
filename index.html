@@ -35,8 +35,17 @@
 
 <div id="theGenerator">
 <h2>The Baby Name Generator</h2><br>
+<h3>I'm having a...</h3>
+    <button>Boy</button> <button>Girl</button>
 <h4>I want a name that...</h4>
 <form id="submissionForm">
+    
+    <h4>Was popular in the years:</h4>
+    <label for="startingYear">From:</label>
+    <input type="number" name="staringYear" id="startingYear">
+    <label for="endingYear">Through:</label>
+    <input type="number" name="endingYear" id="endingYear">
+
     <label for="startsWith">Starts With The Letter:</label>
     <select id="startsWith" name="Letters">
         <option value="letterA">A</option>
@@ -68,11 +77,7 @@
         <option value="noLetterPreference">I'm flexible</option>
     </select>
 
-    <h4>Was popular in the years:</h4>
-    <label for="startingYear">From:</label>
-    <input type="number" name="staringYear" id="startingYear">
-    <label for="endingYear">Through:</label>
-    <input type="number" name="endingYear" id="endingYear">
+    
 
     <h4>That Is Currently...</h4>
     <label for="currentlyPopular"></label>
@@ -93,6 +98,6 @@
 <div id="results">
     <h3>Your Names:</h3>
 </div>
-
+<script src = "java.js"></script>  
 </body>
 </html>
