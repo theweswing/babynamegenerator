@@ -4,7 +4,7 @@
 <head>
 
 <title>The Baby Name Generator</title>
-<link rel="stylesheet" type="textless" href="style.css">
+<link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -36,7 +36,7 @@
 <div id="theGenerator">
 <h2>The Baby Name Generator</h2><br>
 <h3>I'm having a...</h3>
-    <button>Boy</button> <button>Girl</button>
+    <button id="boyButton">Boy</button> <button id="girlButton">Girl</button>
 <h3>I want a name that...</h3>
 <form id="submissionForm">
     
@@ -104,13 +104,13 @@
     </select>
 <br><br><br>
     <input type="submit" value="Show Me A Name!">
-    <input type="submit" value="Show Me Them All!">
 </form>
 
 </div>
 
 <div id="results">
-    <h3>Your Names:</h3>
+    <h3>Your Name:</h3>
+    <p id="displayName">Name Goes Here</p>
 </div>
 <script src = "java.js"></script>  
 </body>

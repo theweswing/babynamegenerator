@@ -88,3 +88,14 @@ function nameByShorterThen(lengthInput, namesObject) {
         console.log(shorterThenArray)
     }
 }
+
+let girlButton = document.getElementById("girlButton")
+let boyButton = document.getElementById("boyButton")
+
+girlButton.addEventListener("click", (e) => {
+        document.body.style.backgroundColor="pink";
+})
+
+boyButton.addEventListener("click", (e) => {
+    document.body.style.backgroundColor="rgb(92, 195, 255)";
+})
