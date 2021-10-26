@@ -37,14 +37,28 @@
 <h2>The Baby Name Generator</h2><br>
 <h3>I'm having a...</h3>
     <button>Boy</button> <button>Girl</button>
-<h4>I want a name that...</h4>
+<h3>I want a name that...</h3>
 <form id="submissionForm">
     
-    <h4>Was popular in the years:</h4>
-    <label for="startingYear">From:</label>
-    <input type="number" name="staringYear" id="startingYear">
-    <label for="endingYear">Through:</label>
-    <input type="number" name="endingYear" id="endingYear">
+    
+    <label for="decade">Was Popular In The:</label>
+    <select id="decade" name="Decade">
+        <option value="1800s">1800s</option>
+        <option value="1900s">1900s</option>
+        <option value="1910s">1910s</option>
+        <option value="1920s">1920s</option>
+        <option value="1930s">1930s</option>
+        <option value="1940s">1940s</option>
+        <option value="1950s">1950s</option>
+        <option value="1960s">1960s</option>
+        <option value="1970s">1970s</option>
+        <option value="1980s">1980s</option>
+        <option value="1990s">1990s</option>
+        <option value="2000s">2000s</option>
+        <option value="2010s">2010s</option>
+    </select>
+
+    <br><br>
 
     <label for="startsWith">Starts With The Letter:</label>
     <select id="startsWith" name="Letters">
