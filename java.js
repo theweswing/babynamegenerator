@@ -62,6 +62,7 @@ clearButton.addEventListener("click", (e) => {
     form.reset()
     arrayOfNames=[]
     result.textContent=""
+    resultStats.textContent=""
 })
 
 submissionForm.addEventListener("submit", (e) => {
@@ -102,8 +103,7 @@ submissionForm.addEventListener("submit", (e) => {
         result.textContent = arrayOfNames[Math.floor(Math.random() * (max - min) + min)]
         currentDecadeArray.forEach((nameObject) => {
             if (result.textContent === nameObject.name){
-                resultStats.textContent=`In the ${decadeInput}, there were ${nameObject.population} babies named ${nameObject.name}. That's a lot of ${nameObject.name}s!`
-                
+                resultStats.textContent=`In the ${decadeInput}, there were ${nameObject.population} babies born with the name ${nameObject.name}. That’s a lot of ${nameObject.name}s!`
             }
         })
         if (arrayOfNames.length<1){
