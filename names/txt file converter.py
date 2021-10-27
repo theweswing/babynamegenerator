@@ -446,6 +446,21 @@ sorted1800s=sort_by_pop(array1880through99)
 trimmed1800s=trim_year(sorted1800s,100)
 trimmed1800s
 
+
+def pull_gender_neutral_names(decade):
+    girl_names=get_girl_names(decade)
+    boy_names=get_boy_names(decade)
+    gender_neutral_names=[]
+    for girlname in girl_names:
+        for boyname in boy_names:
+            if girlname[0]==boyname[0]:
+                gender_neutral_names.append(girlname)
+                gender_neutral_names.append(boyname)
+    return gender_neutral_names
+
+pull_gender_neutral_names(sorted1800s)
+pull_gender_neutral_names(trimmed1800s)
+
 array1900through01=sum_two_arrays(data1900,data1901)
 array1900through02=sum_two_arrays(array1900through01,data1902)
 array1900through03=sum_two_arrays(array1900through02,data1903)
@@ -655,20 +670,20 @@ def rewrite_txt_with_array(txtfile,arrayoftxt):
     ourtxt.write(stringofarray)
     ourtxt.close()
 
-rewrite_txt_with_array("/Users/wschierenbeck/Development/code/baby_name_generator/babynamegenerator/names/top100names1800s.txt",trimmed1800s)
-rewrite_txt_with_array("/Users/wschierenbeck/Development/code/baby_name_generator/babynamegenerator/names/top100names1900s.txt",trimmed1900s)
-rewrite_txt_with_array("/Users/wschierenbeck/Development/code/baby_name_generator/babynamegenerator/names/top100names1910s.txt",trimmed1910s)
-rewrite_txt_with_array("/Users/wschierenbeck/Development/code/baby_name_generator/babynamegenerator/names/top100names1920s.txt",trimmed1920s)
-rewrite_txt_with_array("/Users/wschierenbeck/Development/code/baby_name_generator/babynamegenerator/names/top100names1930s.txt",trimmed1930s)
-rewrite_txt_with_array("/Users/wschierenbeck/Development/code/baby_name_generator/babynamegenerator/names/top100names1940s.txt",trimmed1940s)
-rewrite_txt_with_array("/Users/wschierenbeck/Development/code/baby_name_generator/babynamegenerator/names/top100names1950s.txt",trimmed1950s)
-rewrite_txt_with_array("/Users/wschierenbeck/Development/code/baby_name_generator/babynamegenerator/names/top100names1960s.txt",trimmed1960s)
-rewrite_txt_with_array("/Users/wschierenbeck/Development/code/baby_name_generator/babynamegenerator/names/top100names1970s.txt",trimmed1970s)
-rewrite_txt_with_array("/Users/wschierenbeck/Development/code/baby_name_generator/babynamegenerator/names/top100names1980s.txt",trimmed1980s)
-rewrite_txt_with_array("/Users/wschierenbeck/Development/code/baby_name_generator/babynamegenerator/names/top100names1990s.txt",trimmed1990s)
-rewrite_txt_with_array("/Users/wschierenbeck/Development/code/baby_name_generator/babynamegenerator/names/top100names2000s.txt",trimmed2000s)
-rewrite_txt_with_array("/Users/wschierenbeck/Development/code/baby_name_generator/babynamegenerator/names/top100names2010s.txt",trimmed2010s)
-rewrite_txt_with_array("/Users/wschierenbeck/Development/code/baby_name_generator/babynamegenerator/names/top100recentnames.txt",top100nameslast5years)
+# rewrite_txt_with_array("/Users/wschierenbeck/Development/code/baby_name_generator/babynamegenerator/names/top100names1800s.txt",trimmed1800s)
+# rewrite_txt_with_array("/Users/wschierenbeck/Development/code/baby_name_generator/babynamegenerator/names/top100names1900s.txt",trimmed1900s)
+# rewrite_txt_with_array("/Users/wschierenbeck/Development/code/baby_name_generator/babynamegenerator/names/top100names1910s.txt",trimmed1910s)
+# rewrite_txt_with_array("/Users/wschierenbeck/Development/code/baby_name_generator/babynamegenerator/names/top100names1920s.txt",trimmed1920s)
+# rewrite_txt_with_array("/Users/wschierenbeck/Development/code/baby_name_generator/babynamegenerator/names/top100names1930s.txt",trimmed1930s)
+# rewrite_txt_with_array("/Users/wschierenbeck/Development/code/baby_name_generator/babynamegenerator/names/top100names1940s.txt",trimmed1940s)
+# rewrite_txt_with_array("/Users/wschierenbeck/Development/code/baby_name_generator/babynamegenerator/names/top100names1950s.txt",trimmed1950s)
+# rewrite_txt_with_array("/Users/wschierenbeck/Development/code/baby_name_generator/babynamegenerator/names/top100names1960s.txt",trimmed1960s)
+# rewrite_txt_with_array("/Users/wschierenbeck/Development/code/baby_name_generator/babynamegenerator/names/top100names1970s.txt",trimmed1970s)
+# rewrite_txt_with_array("/Users/wschierenbeck/Development/code/baby_name_generator/babynamegenerator/names/top100names1980s.txt",trimmed1980s)
+# rewrite_txt_with_array("/Users/wschierenbeck/Development/code/baby_name_generator/babynamegenerator/names/top100names1990s.txt",trimmed1990s)
+# rewrite_txt_with_array("/Users/wschierenbeck/Development/code/baby_name_generator/babynamegenerator/names/top100names2000s.txt",trimmed2000s)
+# rewrite_txt_with_array("/Users/wschierenbeck/Development/code/baby_name_generator/babynamegenerator/names/top100names2010s.txt",trimmed2010s)
+# rewrite_txt_with_array("/Users/wschierenbeck/Development/code/baby_name_generator/babynamegenerator/names/top100recentnames.txt",top100nameslast5years)
 
 
 
