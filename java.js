@@ -37,6 +37,7 @@
 
 // doSomething();
 const result = document.querySelector("#displayName");
+const resultStats = document.getElementById("displayNameStatistics")
 const girlButton = document.getElementById("girlButton");
 const boyButton = document.getElementById("boyButton");
 const clearButton = document.querySelector("#clearForm");
@@ -59,6 +60,8 @@ boyButton.addEventListener("click", (e) => {
 
 clearButton.addEventListener("click", (e) => {
     form.reset()
+    arrayOfNames=[]
+    result.textContent=""
 })
 
 submissionForm.addEventListener("submit", (e) => {
@@ -80,6 +83,8 @@ submissionForm.addEventListener("submit", (e) => {
         //     const workingArray = namesArr.slice(0, 99);
         //     console.log(workingArray);
         // }
+        const currentDecadeArray=[...namesArr]
+        console.log(currentDecadeArray)
         namesArr.forEach((namesObject) => {
             let currentName = namesObject.name;
             if (
@@ -91,16 +96,31 @@ submissionForm.addEventListener("submit", (e) => {
                 arrayOfNames.push(currentName);
             }
             
-            
         });
         min = Math.ceil(0);
         max = Math.floor(arrayOfNames.length);
         result.textContent = arrayOfNames[Math.floor(Math.random() * (max - min) + min)]
+        currentDecadeArray.forEach((nameObject) => {
+            if (result.textContent === nameObject.name){
+                console.log(nameObject.population)
+                console.log(decadeInput)
+                resultStats.textContent=`There were ${nameObject.population} babies born with the name ${nameObject.name} in the ${decadeInput}`
+            }
+        })
+        if (arrayOfNames.length<1){
+            result.textContent = "Sorry, no name found that fits your search. Clear and try again!"
+        }
         })
         
 });
 
-
+// function pullNameStats(){
+//     savedNamesArray.forEach((namesObject) => {
+//         if (result.textContent === namesObject.name){
+//             resultStats.textContent = `In ${decadeInput}, ${namesObject.population} were named ${namesObject.name}`
+//         }
+//     })
+// }
 
 
 
