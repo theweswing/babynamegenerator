@@ -36,9 +36,11 @@
 // };
 
 // doSomething();
-
-let girlButton = document.getElementById("girlButton");
-let boyButton = document.getElementById("boyButton");
+const result = document.querySelector("#displayName");
+const girlButton = document.getElementById("girlButton");
+const boyButton = document.getElementById("boyButton");
+const clearButton = document.querySelector("#clearForm");
+const form = document.querySelector("#submissionForm");
 
 let arrayOfNames = [];
 let sexChosen = "M";
@@ -54,6 +56,10 @@ boyButton.addEventListener("click", (e) => {
     sexChosen = "M"
     console.log(sexChosen)
 });
+
+clearButton.addEventListener("click", (e) => {
+    form.reset()
+})
 
 submissionForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -76,20 +82,25 @@ submissionForm.addEventListener("submit", (e) => {
         // }
         namesArr.forEach((namesObject) => {
             let currentName = namesObject.name;
-              if (
+            if (
                 namesObject.sex === sexChosen &&
                 currentName.startsWith(startsWithInput) &&
                 currentName.length >= minNameLength &&
                 currentName.length <= maxNameLength
-              ) {
-                debugger;
+            ) {
                 arrayOfNames.push(currentName);
-                console.log(arrayOfNames);
-              }
+            }
+            
             
         });
-        });
+        min = Math.ceil(0);
+        max = Math.floor(arrayOfNames.length);
+        result.textContent = arrayOfNames[Math.floor(Math.random() * (max - min) + min)]
+        })
+        
 });
+
+
 
 
 
