@@ -54,8 +54,30 @@ boyButton.addEventListener("click", (e) => {
     sexChosen = "M"
 });
 
+babyNameForm.addEventListener("submit", (e) =>{
+    e.preventDefault();
 
+    const decadeInput = e.target.decade.value;
+    const startsWithInput = e.target.startsWith.value;
+    const popularityInput = e.target.currentPopularity.value;
+    const minNameLength = e.target.floorLenght.value;
+    const maxNameLength = e.target.ceilingLength.value;
+    
+    const ratingInput = e.target.rating.value;
+    const commentInput = e.target["new-comment"].value;
 
+    const newRamen = {
+        name: nameInput,
+        restaurant: restaurantInput,
+        image: imageInput,
+        rating: ratingInput,
+        comment: commentInput,
+};
+
+  // const ramenMenu = document.querySelector('ramen-menu')
+    renderRamenImg(newRamen);
+    event.target.reset();
+});
 
 // fetch is interpolated to take in whatever is entered into selectedDecade
 
