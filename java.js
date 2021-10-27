@@ -37,14 +37,16 @@
 
 // doSomething();
 
-let selectedDecace = "1800s"
+let selectedDecade = "1800s"
 let arrayOfMales = []
 let arrayOfFemales = []
 let startsWithArray = []
 let longerThenArray = []
 let shorterThenArray = []
 
-fetch(`http://localhost:3000/${selectedDecace}`)
+// fetch is interpolated to take in whatever is entered into selectedDecade
+
+fetch(`http://localhost:3000/${selectedDecade}`)
 .then((response) => response.json())
 .then((namesArr) => {
     namesArr.forEach((namesObject) => {
@@ -56,12 +58,14 @@ fetch(`http://localhost:3000/${selectedDecace}`)
 function maleNamesOnly(namesObject) {
     if (namesObject.sex === "M") {
         arrayOfMales.push(namesObject.name)
+        console.log(arrayOfMales)
     }
 }
 
 function femaleNamesOnly(namesObject) {
     if (namesObject.sex === "F") {
         arrayOfFemales.push(namesObject.name);
+        console.log(arrayOfFemales)
     }
 }
 
@@ -88,3 +92,4 @@ function nameByShorterThen(lengthInput, namesObject) {
         console.log(shorterThenArray)
     }
 }
+
