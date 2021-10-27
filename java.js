@@ -102,9 +102,8 @@ submissionForm.addEventListener("submit", (e) => {
         result.textContent = arrayOfNames[Math.floor(Math.random() * (max - min) + min)]
         currentDecadeArray.forEach((nameObject) => {
             if (result.textContent === nameObject.name){
-                console.log(nameObject.population)
-                console.log(decadeInput)
-                resultStats.textContent=`There were ${nameObject.population} babies born with the name ${nameObject.name} in the ${decadeInput}`
+                resultStats.textContent=`In the ${decadeInput}, there were ${nameObject.population} babies named ${nameObject.name}. That's a lot of ${nameObject.name}s!`
+                
             }
         })
         if (arrayOfNames.length<1){
