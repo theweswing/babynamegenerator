@@ -85,7 +85,6 @@ submissionForm.addEventListener("submit", (e) => {
         //     console.log(workingArray);
         // }
         const currentDecadeArray=[...namesArr]
-        console.log(currentDecadeArray)
         namesArr.forEach((namesObject) => {
             let currentName = namesObject.name;
             if (
