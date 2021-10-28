@@ -38,6 +38,7 @@
 // doSomething();
 const result = document.querySelector("#displayName");
 const resultStats = document.getElementById("displayNameStatistics")
+const resultRanking = document.getElementById("displayNameRank")
 const girlButton = document.getElementById("girlButton");
 const boyButton = document.getElementById("boyButton");
 const clearButton = document.querySelector("#clearForm");
@@ -63,6 +64,7 @@ clearButton.addEventListener("click", (e) => {
     arrayOfNames=[]
     result.textContent=""
     resultStats.textContent=""
+    resultRanking.textConteont=""
 })
 
 submissionForm.addEventListener("submit", (e) => {
@@ -103,6 +105,20 @@ submissionForm.addEventListener("submit", (e) => {
         currentDecadeArray.forEach((nameObject) => {
             if (result.textContent === nameObject.name){
                 resultStats.textContent=`In the ${decadeInput}, there were ${nameObject.population} babies born with the name ${nameObject.name}. That’s a lot of ${nameObject.name}s!`
+                let girlsOfDecade=currentDecadeArray.slice(0,100)
+                let boysOfDecade=currentDecadeArray.slice(100)
+                console.log(girlsOfDecade)
+                console.log(boysOfDecade)
+                if (nameObject.sex==="F"){
+                    let indexRanking=(girlsOfDecade.findIndex(girlname => girlname.name===result.textContent))
+                    let realRank=(indexRanking+1)
+                    resultRanking.textContent=`${nameObject.name} was ranked #${realRank} on the Social Security Administration's record of the ${decadeInput}'s most common baby names.`
+                }
+                if (nameObject.sex==="M"){
+                    let indexRanking=(boysOfDecade.findIndex(boyname => boyname.name===result.textContent))
+                    let realRank=(indexRanking+1)
+                    resultRanking.textContent=`${nameObject.name} was ranked #${realRank} on the Social Security Administration's record of the ${decadeInput}'s most common baby names.`
+                }
             }
         })
         if (arrayOfNames.length<1){
