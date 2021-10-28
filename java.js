@@ -112,12 +112,12 @@ submissionForm.addEventListener("submit", (e) => {
                 if (nameObject.sex==="F"){
                     let indexRanking=(girlsOfDecade.findIndex(girlname => girlname.name===result.textContent))
                     let realRank=(indexRanking+1)
-                    resultRanking.textContent=`${nameObject.name} was ranked #${realRank} on the Social Security Administration's record of the ${decadeInput}'s most common baby names.`
+                    resultRanking.textContent=`${nameObject.name} was ranked #${realRank} in the Social Security Administration record of the ${decadeInput}' most common girl names.`
                 }
                 if (nameObject.sex==="M"){
                     let indexRanking=(boysOfDecade.findIndex(boyname => boyname.name===result.textContent))
                     let realRank=(indexRanking+1)
-                    resultRanking.textContent=`${nameObject.name} was ranked #${realRank} on the Social Security Administration's record of the ${decadeInput}'s most common baby names.`
+                    resultRanking.textContent=`${nameObject.name} was ranked #${realRank} in the Social Security Administration record of the ${decadeInput}' most common boy names.`
                 }
             }
         })
