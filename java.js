@@ -64,7 +64,7 @@ clearButton.addEventListener("click", (e) => {
     arrayOfNames=[]
     result.textContent=""
     resultStats.textContent=""
-    resultRanking.textConteont=""
+    resultRanking.textContent=""
 })
 
 submissionForm.addEventListener("submit", (e) => {
