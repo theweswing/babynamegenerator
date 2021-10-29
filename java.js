@@ -89,7 +89,14 @@ submissionForm.addEventListener("submit", (e) => {
         const currentDecadeArray=[...namesArr]
         namesArr.forEach((namesObject) => {
             let currentName = namesObject.name;
-            if (
+            if (startsWithInput === "noLetterPreference" && 
+                namesObject.sex === sexChosen &&
+                currentName.length >= minNameLength &&
+                currentName.length <= maxNameLength) 
+                {
+                arrayOfNames.push(currentName);
+            }
+            else if (
                 namesObject.sex === sexChosen &&
                 currentName.startsWith(startsWithInput) &&
                 currentName.length >= minNameLength &&
