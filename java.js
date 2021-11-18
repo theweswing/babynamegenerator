@@ -76,7 +76,7 @@ submissionForm.addEventListener("submit", (e) => {
     const minNameLength = e.target.floorLength.value;
     const maxNameLength = e.target.ceilingLength.value;
     
-    fetch(`http://localhost:3000/${decadeInput}`)
+    fetch(`https://afternoon-peak-98799.herokuapp.com/${decadeInput}`)
         .then((response) => response.json())
         .then((namesArr) => {
         // if (sexChosen === "M") {
